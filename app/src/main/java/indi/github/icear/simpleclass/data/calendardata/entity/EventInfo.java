@@ -6,6 +6,7 @@ package indi.github.icear.simpleclass.data.calendardata.entity;
  */
 
 public class EventInfo implements Cloneable {
+    private long eventId;
     private long calendarId;
     private String title;
     private String eventLocation;
@@ -20,6 +21,14 @@ public class EventInfo implements Cloneable {
     @Override
     public EventInfo clone() throws CloneNotSupportedException {
         return (EventInfo) super.clone();
+    }
+
+    public long getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(long eventId) {
+        this.eventId = eventId;
     }
 
     public long getCalendarId() {
